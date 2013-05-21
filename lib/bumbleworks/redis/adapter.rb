@@ -1,4 +1,5 @@
 require "bumbleworks/storage_adapter"
+require "rufus-json/automatic"
 require "ruote-redis"
 
 module Bumbleworks
