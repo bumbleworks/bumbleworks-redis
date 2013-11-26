@@ -49,4 +49,8 @@ describe Bumbleworks::Redis::Adapter do
       described_class.use?('Redis').should be_false
     end
   end
+
+  it 'allows history storage' do
+    described_class.allow_history_storage?.should be_true
+  end
 end
