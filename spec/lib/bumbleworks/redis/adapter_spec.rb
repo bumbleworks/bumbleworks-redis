@@ -38,7 +38,7 @@ describe Bumbleworks::Redis::Adapter do
     end
   end
 
-  describe 'use?' do
+  describe '.use?' do
     it 'returns true if given storage class matches Redis' do
       described_class.use?(Redis.new).should be_true
     end
@@ -50,7 +50,9 @@ describe Bumbleworks::Redis::Adapter do
     end
   end
 
-  it 'allows history storage' do
-    described_class.allow_history_storage?.should be_true
+  describe '.allow_history_storage?' do
+    it 'returns true' do
+      described_class.allow_history_storage?.should be_true
+    end
   end
 end
