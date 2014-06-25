@@ -17,7 +17,7 @@ describe Bumbleworks::Ruote do
     Bumbleworks.configuration.add_storage_adapter(Bumbleworks::Redis::Adapter)
     storage = Redis.new
     Bumbleworks.storage = storage
-    Ruote::Redis::Storage.should_receive(:new).with(storage)
+    expect(Ruote::Redis::Storage).to receive(:new).with(storage)
     described_class.send(:storage)
   end
 
