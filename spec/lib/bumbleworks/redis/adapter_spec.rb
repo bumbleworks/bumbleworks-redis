@@ -1,10 +1,6 @@
 require 'bumbleworks'
 
 describe Bumbleworks::Redis::Adapter do
-  before :each do
-    Bumbleworks.reset!
-  end
-
   describe 'when added to configuration' do
     it 'adds storage adapter to Bumbleworks' do
       described_class.stub(:auto_register?).and_return(false)

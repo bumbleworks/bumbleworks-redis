@@ -2,7 +2,6 @@ require 'bumbleworks'
 
 describe Bumbleworks::Ruote do
   before :each do
-    Bumbleworks.reset!
     Bumbleworks::Redis::Adapter.auto_register = false
   end
 
